@@ -1,0 +1,79 @@
+@keyframes typing {
+  100% {
+    left: 100%;
+    margin: 0 -35px 0 35px;
+  }
+}
+@keyframes slide {
+  100% {
+    top: -201px;
+  }
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Open Sans";
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #15161d;
+}
+
+a {
+  text-decoration: none;
+  transition: 0.4s;
+}
+a:hover {
+  color: red;
+}
+
+input {
+  border: none;
+  outline: none;
+}
+
+ul {
+  list-style: none;
+}
+
+.wrapper {
+  display: inline-flex;
+}
+.wrapper .staticTxt {
+  font-weight: 400;
+  color: #fff;
+  font-size: 40px;
+}
+.wrapper .dynamicTxt {
+  margin-left: 15px;
+  height: 50px;
+  line-height: 50px;
+  color: #fff;
+  overflow: hidden;
+}
+.wrapper .dynamicTxt li {
+  position: relative;
+  font-size: 40px;
+  font-weight: 400;
+  color: #f1e900;
+  top: 0;
+  animation: slide 6s steps(4) infinite;
+}
+.wrapper .dynamicTxt li span {
+  position: relative;
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  border-left: 2px solid #f1e900;
+  left: 0;
+  background: #15161d;
+  animation: typing 1.5s steps(10) infinite;
+}
+
+/*# sourceMappingURL=style.css.map */

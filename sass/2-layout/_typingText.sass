@@ -1,0 +1,41 @@
+
+@use '../1-base/variables'
+.wrapper
+    display: inline-flex
+
+    .staticTxt
+        font-weight: 400
+        color: variables.$light-color
+        font-size: 40px
+
+    .dynamicTxt
+        margin-left: 15px
+        height: 50px
+        line-height: 50px
+        color: variables.$light-color
+        overflow: hidden
+
+        li
+            position: relative
+            font-size: 40px
+            font-weight: 400
+            color: variables.$primary-color
+            top:0
+            animation: slide 6s steps(4) infinite
+
+            span
+                position: relative
+                
+                &::after
+                content: ''
+                position: absolute
+                height: 100%
+                width: 100%
+                border-left: 2px solid variables.$primary-color
+                left: 0
+                background: variables.$bg-color
+                animation: typing 1.5s steps(10) infinite
+
+
+                            
+
